@@ -1,0 +1,131 @@
+body {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.title {
+  color: #eee;
+  padding: 2rem;
+  margin: 2rem;
+  background: #222;
+  font-size: 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [first] 100px [sec] 100px [third] 100px [fourth] 100px [end];
+  grid-template-rows: [first] 100px [sec] 100px [third] 100px [end];
+  grid-gap: 10px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    background: red;
+  }
+
+  .item1 {
+    grid-column-start: first;
+    grid-column-end: sec;
+    grid-row-start: first;
+    grid-row-end: sec;
+    background: #eee;
+    height: 50px;
+    width: 50px;
+  }
+
+  .item2 {
+    grid-column-start: sec;
+    grid-column-end: third;
+    grid-row-start: first;
+    grid-row-end: sec;
+    background: #eee;
+    height: 50px;
+    width: 50px;
+  }
+
+  .item3 {
+    grid-column-start: third;
+    grid-column-end: fourth;
+    grid-row-start: first;
+    grid-row-end: sec;
+    background: #eee;
+    height: 50px;
+    width: 50px;
+  }
+
+  .item4 {
+    grid-column-start: fourth;
+    grid-column-end: end;
+    grid-row-start: first;
+    grid-row-end: sec;
+    background: #eee;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    background: yellow;
+  }
+
+  .item1 {
+    grid-row-end: third;
+    height: 75px;
+    background: green;
+  }
+
+  .item2 {
+    grid-row-end: third;
+    height: 75px;
+    background: green;
+  }
+
+  .item3 {
+    grid-row-end: third;
+    height: 75px;
+    background: green;
+  }
+
+  .item4 {
+    grid-row-end: third;
+    height: 75px;
+    background: green;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    background: #222;
+  }
+
+  .item1 {
+    grid-row-end: end;
+    height: 100px;
+    background: red;
+  }
+
+  .item2 {
+    grid-row-end: end;
+    height: 100px;
+    background: red;
+  }
+
+  .item3 {
+    grid-row-end: end;
+    height: 100px;
+    background: red;
+  }
+
+  .item4 {
+    grid-row-end: end;
+    height: 100px;
+    background: red;
+  }
+}
